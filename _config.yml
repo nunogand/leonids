@@ -3,29 +3,40 @@
 # Site wide configuration
 ####################################
 #
-title: Leonids
-email: zourenyuan@gmail.com
-description: A simple and awesome blog theme powered by jekyll.
-url: https://renyuanz.github.io/leonids # the base hostname & protocol for your site
-keywords: ["Programming", "PHP", "Ruby"]
+title: nunogand.github.io
+email: nunogand@gmail.com
+description: O meu caderno de apontamentos.
+url: https://nunogand.github.io # the base hostname & protocol for your site
+keywords: ["PowerBi", "Raspberri Pi", "GPS"]
+author: Nuno Rodrigues
 
 #
 ###################################
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
+timezone:          Europe/Lisbon
+locale:            pt-pt
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
 permalink:         /articles/:year-:month/:title
 
 kramdown:
+  input: GFM
   auto_ids: true
+  hard_wrap: false
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
   enable_coderay: false
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+sass:
+  style: compressed    
 
 #
 ###################################
@@ -33,26 +44,26 @@ kramdown:
 ####################################
 #
 owner:
-  name: Leonids
-  avatar: leonids-logo.png
-  job: "PHP & Ruby Developer"
-  bio: "A backend developer who loves design awesome things. Working for RendezvousCheznous atm in Marseille, France."
-  email: zourenyuan@gmail.com
-  disqus-shortname: renyuanzblog
-  twitter: renyuan814 #username
+  name: nunogand
+  avatar: logo_main.png
+  job: "...já fiz muitas coisas"
+  bio: "Apontamentos e recortes dispersos; nunca se sabe quando dão jeito."
+  email: nunogand@gmail.com
+  disqus-shortname: 
+  twitter: nunogand #username
   facebook: #username
   google:
     plus: #username
-    analytics: UA-62251910-2
+    analytics: 
     verify:
     ad-client:
     ad-slot:
   bing-verify:
-  github: renyuanz #username
+  github: nunogand #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: renyuan-zou-69b7038a #username
+  linkedin: nunogand #username
   xing: #username
-  instagram: #username
+  instagram: nunogand #username
   lastfm: #username
   tumblr: #username
   pinterest: #username
@@ -62,6 +73,15 @@ owner:
   youtube: #username
   soundcloud: #username
   weibo: #username
-  flickr: #username
+  flickr: nunogand #username
   codepen: #username
   telegram: #username
+#
+###################################
+# Jekyll seo
+####################################
+#
+plugins:
+  - jekyll-seo-tag
+lang: pt_PT
+future: true
